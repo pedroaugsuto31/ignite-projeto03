@@ -1,0 +1,13 @@
+# docker run --name ignite-projeto03 -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=projeto03 -p 5432:5432 bitnami/postgresql
+
+version: '3'
+
+services: 
+  ignite-projeto03:
+    image: bitnami/postgresql
+    ports: 
+      - 5432:5432
+    environment: 
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=projeto03
