@@ -40,7 +40,7 @@ describe('Search Gyms (e2e)', () => {
     const response = await request(app.server)
       .get('/gyms/search')
       .query({
-        query: 'Java',
+        query: 'C#',
       })
       .set('Authorization', `Bearer ${token}`)
       .send()
@@ -49,7 +49,7 @@ describe('Search Gyms (e2e)', () => {
     expect(response.body.gyms).toHaveLength(1)
     expect(response.body.gyms).toEqual([
       expect.objectContaining({
-        title: 'Java Gym',
+        title: 'C# Gym',
       }),
     ])
   })

@@ -25,13 +25,13 @@ describe('Create Check-In (e2e)', () => {
     })
 
     const response = await request(app.server)
-      .post(`/gyms/${gym.id}/check-in`)
+      .post(`/gyms/${gym.id}/check-ins`)
       .set('Authorization', `Bearer ${token}`)
       .send({
         latitude: -3.747990,
         longitude: -38.518870
       })
 
-    expect(response.statusCode).toEqual(200)
+    expect(response.statusCode).toEqual(201)
   })
 })
